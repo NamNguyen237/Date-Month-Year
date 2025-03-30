@@ -3,7 +3,7 @@ import pyperclip
 import datetime
 import argparse
 
-def get_days_for_weekdays(year, month, weekday1, weekday2, weekday3):
+def get_days_for_weekdays(year, month, weekday1, weekday2):
     # Tạo một lịch tháng
     cal = calendar.Calendar()
     days = []
@@ -12,7 +12,7 @@ def get_days_for_weekdays(year, month, weekday1, weekday2, weekday3):
     # Duyệt qua các ngày trong tháng
     for day in cal.itermonthdays2(year, month):
         if day[0] != 0:  # Loại bỏ các ngày không thuộc tháng hiện tại
-            if day[1] == weekday1 or day[1] == weekday2 or day[1] == weekday3:
+            if day[1] == weekday1 or day[1] == weekday2:
                 days.append(f"{day[0]:02d}/{month:02d}/{year} ({days2[day[1]]})")
     
     return days
@@ -43,20 +43,13 @@ them = input("Xác nhận thứ? (0: OK, 1: Thêm thứ): ")
 if them == "1":
     day2 = int(input("Nhập thứ trong tuần (2: Thứ 2, 3: Thứ 3, ..., 8: Chủ nhật): "))
     weekday2 = day2 - 2
-    them2 = input("Xác nhận thứ thứ ba? (0: OK, 1: Thêm thứ): ")
-    if them2 == "1":
-        day3 = int(input("Nhập thứ trong tuần (2: Thứ 2, 3: Thứ 3, ..., 8: Chủ nhật): "))
-        weekday3 = day3 - 2
-    else:
-        weekday3 = -1
 else:
     weekday2 = -1
-    weekday3 = -1
 weekday1 = day - 2
 
 output = ''
-weekdays = get_days_for_weekdays(year, month, weekday1, weekday2, weekday3)
-print(f"Các ngày trong tháng {month}/{year} là thứ {days[weekday1]}, thứ {days[weekday2]}, hoặc thứ {days[weekday3]}:\n")
+weekdays = get_days_for_weekdays(year, month, weekday1, weekday2)
+print(f"Các ngày trong tháng {month}/{year} là thứ {days[weekday1]} hoặc thứ {days[weekday2]}:\n")
 for x in weekdays:
     print(x)
     output += x + "\n"

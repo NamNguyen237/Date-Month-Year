@@ -20,11 +20,16 @@ def get_days_for_weekdays(year, month, weekday1, weekday2, weekday3):
 # Sử dụng argparse để xử lý đối số dòng lệnh
 parser = argparse.ArgumentParser(description="Lấy các ngày trong tháng là thứ nhất định")
 parser.add_argument("--manual", action="store_true", help="Nhập năm và tháng thủ công")
+parser.add_argument("--manual-month", action="store_true", help="Nhập tháng thủ công (năm hiện tại)")
 args = parser.parse_args()
 
 if args.manual:
     # Nhập năm và tháng từ người dùng
     year = int(input("Nhập năm: "))
+    month = int(input("Nhập tháng: "))
+elif args.manual_month:
+    now = datetime.datetime.now()
+    year = now.year
     month = int(input("Nhập tháng: "))
 else:
     # Lấy ngày giờ hiện tại

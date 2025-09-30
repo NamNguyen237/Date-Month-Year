@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=c:\Users\Dell 7390\OneDrive - MSFT\Documents\Date-Month-Year\.venv"
+set "VIRTUAL_ENV=c:\Users\Admin\OneDrive - MSFT\Documents\Date-Month-Year\.venv"
 
 if not defined PROMPT set PROMPT=$P$G
 

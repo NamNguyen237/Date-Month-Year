@@ -1,4 +1,4 @@
-('C:\\Users\\Dell 7390\\OneDrive - '
+('C:\\Users\\Admin\\OneDrive - '
  'MSFT\\Documents\\Date-Month-Year\\build\\run\\PYZ-00.pyz',
  [('__future__', 'C:\\Python313\\Lib\\__future__.py', 'PYMODULE'),
   ('_colorize', 'C:\\Python313\\Lib\\_colorize.py', 'PYMODULE'),
@@ -155,7 +155,7 @@
   ('pprint', 'C:\\Python313\\Lib\\pprint.py', 'PYMODULE'),
   ('py_compile', 'C:\\Python313\\Lib\\py_compile.py', 'PYMODULE'),
   ('pyperclip',
-   'c:\\Users\\Dell 7390\\OneDrive - '
+   'c:\\Users\\Admin\\OneDrive - '
    'MSFT\\Documents\\Date-Month-Year\\.venv\\Lib\\site-packages\\pyperclip\\__init__.py',
    'PYMODULE'),
   ('quopri', 'C:\\Python313\\Lib\\quopri.py', 'PYMODULE'),

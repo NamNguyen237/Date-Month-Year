@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV 'c:\Users\Dell 7390\OneDrive - MSFT\Documents\Date-Month-Year\.venv'
+set -gx VIRTUAL_ENV 'c:\Users\Admin\OneDrive - MSFT\Documents\Date-Month-Year\.venv'
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"Scripts $PATH

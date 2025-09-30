@@ -70,7 +70,14 @@ if len(weekdays) >= 10:
 else:
     sl = f'0{len(weekdays)}'
 print(f"Tổng {sl} buổi\n")
-output += f"Tổng {sl} buổi\n"
-# Sao chép dữ liệu vào bộ nhớ tạm
-pyperclip.copy(output)
+
+# Tạo HTML clipboard
+html_output = "<html><body><pre style='font-family:Times New Roman;font-size:12pt;'>"
+for x in weekdays:
+    html_output += x + "\n"
+html_output += f"<b>Tổng {sl} buổi</b>\n"
+html_output += "</pre></body></html>"
+
+# Sao chép dữ liệu vào clipboard với định dạng HTML
+pyperclip.copy(html_output)
 print("Dữ liệu đã được sao chép vào bộ nhớ tạm.")

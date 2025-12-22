@@ -115,7 +115,7 @@ else:
     year = now.year
 
 # Chạy lệnh
-generate_schedule_v9("template.xlsx", f"Lich_Hoc_Thang_{month}.xlsx", month, year)
+generate_schedule_v9("template.xlsx", f"Lich_Hoc_Phi_Thang_{month}.xlsx", month, year)
 
 print("Nhấn Enter để kết thúc...")
 input()

@@ -1,0 +1,5 @@
+{
+  "name": "Excel Schedule Generator",
+  "description": "A tool to automate class schedule generation in Excel, replicating specific Python logic for scheduling and tuition calculations.",
+  "requestFramePermissions": []
+}

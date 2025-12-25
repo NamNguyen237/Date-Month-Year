@@ -83,7 +83,8 @@ const App: React.FC = () => {
 
   const handleDownload = () => {
     if (!resultData) return;
-    const blob = new Blob([resultData], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+    // Cast to any to avoid TS error: Type 'Uint8Array<ArrayBufferLike>' is not assignable to type 'BlobPart'.
+    const blob = new Blob([resultData as any], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
     saveAs(blob, `Lich_Hoc_Phi_Thang_${month}_${year}.xlsx`);
   };
 
